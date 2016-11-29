@@ -1,0 +1,2 @@
+[B]Version 1.0.0[/B] - 30 Nov 2016
+Initial release of BiB/i Calibre plugin
