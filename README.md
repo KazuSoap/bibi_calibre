@@ -52,7 +52,7 @@ Main toolbar is a plain choice but any toolbars/menus should work.
 4. Restart calibre.
 
 
-Or if you want install from sources, use the following command while in sources directory to create plugin .zip and install it automatically::
+Or if you want to install from sources, use the following command while in sources directory to create plugin .zip and install it automatically::
 
     > calibre-customize -b .
 
