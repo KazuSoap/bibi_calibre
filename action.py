@@ -47,17 +47,21 @@ class BibiCalibreAction(InterfaceAction):
         db = self.gui.library_view.model().db
         epubpath = db.format_abspath(book_id, "EPUB", index_is_id=True)
 
-        if not epubpath:
+        if not epubpath or not os.path.exists(epubpath):
             return error_dialog(self.gui, 'No EPUB file',
                 'You must select a book which has EPUB format.', show=True)
 
         if not hasattr(self, 'httpd'):
             self._start_webserver()
 
-        extract(epubpath,
-            os.path.join(self.htmlroot, 'bookshelf', str(book_id)))
+        book_path = str(book_id) + "_" + str(os.stat(epubpath).st_mtime)
+        book_fullpath = os.path.join(self.htmlroot, 'bookshelf', book_path)
 
-        url = 'http://localhost:' + str(self.port) + '/i/?book=' + str(book_id)
+
+        if not os.path.exists(book_fullpath):
+            extract(epubpath, book_fullpath)
+
+        url = 'http://localhost:' + str(self.port) + '/i/?book=' + book_path
 
         browser = c.get(config.KEY_PATH_BROWSER).strip()
         if browser:

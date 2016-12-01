@@ -12,7 +12,7 @@ BiB/i can handle EPUB which uses vertical writing system well, so this plug-in
 is mainly intended for people using vertical writing system.
 But BiB/i itself is very good EPUB reader so maybe useful for others.
 
-BiB/i calibre plug-in make it easy to read EPUB files on calibre library
+BiB/i calibre plug-in makes it easy to read EPUB files on calibre library
 using BiB/i. You don't need to install BiB/i. Just install this plug-in,
 select an epub book, and click button, that all!
 
