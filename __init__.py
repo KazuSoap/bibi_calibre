@@ -24,7 +24,7 @@ class ActionBibiCalibre(InterfaceActionBase):
     description             = 'Open epub by BiB/i EPUB reader'
     supported_platforms     = ['windows', 'osx', 'linux']
     author                  = 'Daisuke Cato'
-    version                 = (1, 0, 0)
+    version                 = (1, 0, 1)
     minimum_calibre_version = (1, 0, 0)
 
     #: This field defines the GUI plugin class that contains all the code

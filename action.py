@@ -87,9 +87,9 @@ class BibiCalibreAction(InterfaceAction):
         self.htmlroot = PersistentTemporaryDirectory()
         print(self.htmlroot)
 
-        zipfile = os.path.join(self.htmlroot, 'bibi-0.999.4.zip')
+        zipfile = os.path.join(self.htmlroot, 'bibi.zip')
         with open(zipfile,'wb') as f:
-            f.write(self.load_resources(['bibi-0.999.4.zip']).itervalues().next())
+            f.write(self.load_resources(['bibi-0.999.7.zip']).itervalues().next())
         extract(zipfile, self.htmlroot)
 
         handler = RootedHTTPRequestHandler
