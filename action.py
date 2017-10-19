@@ -89,10 +89,11 @@ class BibiCalibreAction(InterfaceAction):
 
         zipfile = os.path.join(self.htmlroot, 'bibi.zip')
         with open(zipfile,'wb') as f:
-            f.write(self.load_resources(['bibi-0.999.7.zip']).itervalues().next())
+            f.write(self.load_resources(['bibi-0.999.9-r7.zip']).itervalues().next())
         extract(zipfile, self.htmlroot)
 
         handler = RootedHTTPRequestHandler
+        self.htmlroot = self.htmlroot + '/bibi-0.999.9-r7/bib'
         handler.base_path = self.htmlroot
 
         self.httpd = ThreadedTCPServer(('localhost', 0), handler)
