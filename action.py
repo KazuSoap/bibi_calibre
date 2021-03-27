@@ -14,8 +14,8 @@ import subprocess
 import threading
 import urllib
 
-import SocketServer
-import SimpleHTTPServer
+import socketserver
+import http.server
 
 from calibre import extract
 from calibre.gui2 import error_dialog
@@ -89,7 +89,7 @@ class BibiCalibreAction(InterfaceAction):
 
         zipfile = os.path.join(self.htmlroot, 'bibi.zip')
         with open(zipfile,'wb') as f:
-            f.write(self.load_resources(['bibi-0.999.9-r7.zip']).itervalues().next())
+            f.write(iter(self.load_resources(['bibi-0.999.9-r7.zip']).values()).__next__())
         extract(zipfile, self.htmlroot)
 
         handler = RootedHTTPRequestHandler
@@ -110,14 +110,14 @@ class BibiCalibreAction(InterfaceAction):
         print("Server loop running in thread: ", server_thread.name)
 
 
-class ThreadedTCPServer(SocketServer.ThreadingMixIn, SocketServer.TCPServer):
+class ThreadedTCPServer(socketserver.ThreadingMixIn, socketserver.TCPServer):
     '''
     Asynchronous Mixins
     cf. http://docs.python.jp/2/library/socketserver.html
     '''
     pass
 
-class RootedHTTPRequestHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
+class RootedHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
     '''
     htmlroot specifiable SimpleHTTPRequestHandler
     cf. http://louistiao.me/posts/python-simplehttpserver-recipe-serve-specific-directory/
@@ -126,7 +126,7 @@ class RootedHTTPRequestHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
     def translate_path(self, path):
         path = path.split('?',1)[0]
         path = path.split('#',1)[0]
-        path = posixpath.normpath(urllib.unquote(path))
+        path = posixpath.normpath(urllib.parse.unquote(path))
         words = path.split('/')
         words = filter(None, words)
         path = self.base_path
