@@ -1,0 +1,12 @@
+/*/
+!bibi_calibre/
+!images/
+*.*
+!*.md
+!*.png
+!*.py
+!*.txt
+!*.zip
+!.gitignore
+!setup.cfg
+!LICENSE
