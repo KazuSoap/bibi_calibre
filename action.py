@@ -1,8 +1,9 @@
 # vim:fileencoding=UTF-8:ts=4:sw=4:sta:et:sts=4:ai
 
-__license__   = 'GPL v3'
-__copyright__ = '2016, Daisuke Cato <daisuke.cato@gmail.com>'
-__docformat__ = 'restructuredtext en'
+__license__    = 'GPL v3'
+__copyright__  = '2016, Daisuke Cato <daisuke.cato@gmail.com>'
+__docformat__  = 'restructuredtext en'
+__maintainer__ = "KazuSoap"
 
 import os
 import platform
@@ -109,7 +110,7 @@ class BibiCalibreAction(InterfaceAction):
 class ThreadedTCPServer(socketserver.ThreadingMixIn, socketserver.TCPServer):
     '''
     Asynchronous Mixins
-    cf. http://docs.python.jp/2/library/socketserver.html
+    cf. https://docs.python.org/ja/3/library/socketserver.html
     '''
     pass
 
