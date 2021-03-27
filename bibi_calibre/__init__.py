@@ -30,8 +30,6 @@ PLUGIN_AUTHORS = \
 __author__ + ' (maintainer: ' + __maintainer__  + ')\n' + \
 __copyright__  + '\n'
 
-print(PLUGIN_AUTHORS)
-
 class ActionBibiCalibre(InterfaceActionBase):
     '''
     This class is a simple wrapper that provides information about the actual
