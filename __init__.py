@@ -1,7 +1,4 @@
-#!/usr/bin/env python
 # vim:fileencoding=UTF-8:ts=4:sw=4:sta:et:sts=4:ai
-from __future__ import (unicode_literals, division, absolute_import,
-                        print_function)
 
 __license__   = 'GPL v3'
 __copyright__ = '2016, Daisuke Cato <daisuke.cato@gmail.com>'
@@ -68,16 +65,3 @@ class ActionBibiCalibre(InterfaceActionBase):
         :param config_widget: The widget returned by :meth:`config_widget`.
         '''
         config_widget.save_settings()
-
-
-# For testing, run from command line with this:
-# calibre-debug -e __init__.py
-if __name__ == '__main__':
-    try:
-        from PyQt5.Qt import QApplication
-    except ImportError as e:
-        from PyQt4.Qt import QApplication
-
-    from calibre.gui2.preferences import test_widget
-    app = QApplication([])
-    test_widget('Advanced', 'Plugins')
