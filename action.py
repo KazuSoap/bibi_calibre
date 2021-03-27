@@ -55,13 +55,13 @@ class BibiCalibreAction(InterfaceAction):
             self._start_webserver()
 
         book_path = str(book_id) + "_" + str(os.stat(epubpath).st_mtime)
-        book_fullpath = os.path.join(self.htmlroot, 'bookshelf', book_path)
+        book_fullpath = os.path.join(self.htmlroot, 'bibi-bookshelf', book_path)
 
 
         if not os.path.exists(book_fullpath):
             extract(epubpath, book_fullpath)
 
-        url = 'http://localhost:' + str(self.port) + '/i/?book=' + book_path
+        url = 'http://localhost:' + str(self.port) + '/bibi/?book=' + book_path
 
         browser = c.get(config.KEY_PATH_BROWSER).strip()
         if browser:
@@ -89,11 +89,10 @@ class BibiCalibreAction(InterfaceAction):
 
         zipfile = os.path.join(self.htmlroot, 'bibi.zip')
         with open(zipfile,'wb') as f:
-            f.write(iter(self.load_resources(['bibi-0.999.9-r7.zip']).values()).__next__())
+            f.write(iter(self.load_resources(['Bibi-v1.2.0.zip']).values()).__next__())
         extract(zipfile, self.htmlroot)
 
         handler = RootedHTTPRequestHandler
-        self.htmlroot = self.htmlroot + '/bibi-0.999.9-r7/bib'
         handler.base_path = self.htmlroot
 
         self.httpd = ThreadedTCPServer(('localhost', 0), handler)
