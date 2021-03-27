@@ -83,27 +83,5 @@ License
 
 ### Bibi Calibre Plug-in
 
-* &copy; Daisuke Cato - https://github.com/dcato/bibi_calibre
-* Licensed under GPL-3.0 - https://www.gnu.org/licenses/gpl-3.0.txt
-
-
-### Bibi
-
-* &copy; Satoru MATSUSHIMA - http://bibi.epub.link/ or https://github.com/satorumurmur/bibi
-* Licensed under the MIT license. - http://www.opensource.org/licenses/mit-license.php
-
-
-### Bibi is including and powered by these open source softwares:
-
-* [The Elegant Icon Font](http://www.elegantthemes.com/blog/resources/elegant-icon-font) ... &copy; Elegant Themes, Inc. (Dual licensed under the GPL 2.0 and MIT license.)
-* [Font Awesome](http://fontawesome.io) ... &copy; Dave Gandy ([Licensed under SIL Open Font License (OFL) 1.1](http://scripts.sil.org/OFL))
-* [Native Promise Only](https://github.com/getify/native-promise-only) ... &copy; Kyle Simpson (Licensed under the MIT license.)
-* [Hammer.JS](http://hammerjs.github.io/) ... &copy; Jorik Tangelder (Licensed under the MIT license.)
-* [easing.js](https://github.com/danro/easing-js) ... &copy; Dan Rogers ([Licensed under the MIT license.](http://danro.mit-license.org/))
-* [sML](https://github.com/satorumurmur/sML) ... &copy; Satoru MATSUSHIMA (Licensed under the MIT license.)
-
-
-### Bibi Extension: Unzipper is including and powered by these open source softwares:
-
-* [JSZip](http://stuartk.com/jszip) ... &copy; Stuart Knightley (Dual licensed under the MIT license or GPLv3.)
-* [base64.js](https://github.com/dankogai/js-base64) ... &copy; dankogai (Licensed under the MIT license.)
+* &copy; [Daisuke Cato](https://github.com/dcato/bibi_calibre)
+* Licensed under [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.txt)
