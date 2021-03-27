@@ -1,18 +1,21 @@
 # vim:fileencoding=UTF-8:ts=4:sw=4:sta:et:sts=4:ai
 
+__copyright__  = 'Copyright (C) 2016 Daisuke Cato <daisuke.cato@gmail.com>'
+__version__    = '1.2.0'
 __license__    = 'GPL v3'
-__copyright__  = '2016, Daisuke Cato <daisuke.cato@gmail.com>'
+__author__     = 'Daisuke Cato'
+__maintainer__ = 'KazuSoap'
+__url__        = 'https://github.com/KazuSoap/bibi_calibre'
 __docformat__  = 'restructuredtext en'
-__maintainer__ = "KazuSoap"
 
 # The class that all Interface Action plugin wrappers must inherit from
 from calibre.customize import InterfaceActionBase
 
 PLUGIN_AUTHORS = \
-"""Daisuke Cato
-Copyright ©: 2016 Daisuke Cato <daisuke.cato@gmail.com>
-Maintainer : KazuSoap
-"""
+__author__ + ' (maintainer: ' + __maintainer__  + ')\n' + \
+__copyright__  + '\n'
+
+print(PLUGIN_AUTHORS)
 
 class ActionBibiCalibre(InterfaceActionBase):
     '''
@@ -28,8 +31,8 @@ class ActionBibiCalibre(InterfaceActionBase):
     description             = 'Open epub by BiBi EPUB reader'
     supported_platforms     = ['windows', 'osx', 'linux']
     author                  = PLUGIN_AUTHORS
-    version                 = (1, 2, 0)
-    minimum_calibre_version = (1, 0, 0)
+    version                 = tuple([int(x) for x in __version__.split(".")])
+    minimum_calibre_version = (5, 0, 0)
 
     #: This field defines the GUI plugin class that contains all the code
     #: that actually does something. Its format is module_path:class_name
