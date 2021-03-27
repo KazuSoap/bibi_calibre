@@ -8,6 +8,12 @@ __maintainer__ = "KazuSoap"
 # The class that all Interface Action plugin wrappers must inherit from
 from calibre.customize import InterfaceActionBase
 
+PLUGIN_AUTHORS = \
+"""Daisuke Cato
+Copyright ©: 2016 Daisuke Cato <daisuke.cato@gmail.com>
+Maintainer : KazuSoap
+"""
+
 class ActionBibiCalibre(InterfaceActionBase):
     '''
     This class is a simple wrapper that provides information about the actual
@@ -19,10 +25,10 @@ class ActionBibiCalibre(InterfaceActionBase):
     calibre utilities to run without needing to load the GUI libraries.
     '''
     name                    = 'BiBi Calibre Plugin'
-    description             = 'Open epub by BiB/i EPUB reader'
+    description             = 'Open epub by BiBi EPUB reader'
     supported_platforms     = ['windows', 'osx', 'linux']
-    author                  = 'Daisuke Cato'
-    version                 = (1, 0, 2)
+    author                  = PLUGIN_AUTHORS
+    version                 = (1, 2, 0)
     minimum_calibre_version = (1, 0, 0)
 
     #: This field defines the GUI plugin class that contains all the code
