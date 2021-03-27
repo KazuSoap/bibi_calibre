@@ -30,10 +30,10 @@ select an epub book, and click button, that all!
 Table of Contents
 --------------------------------------------------------------------------------------------------------------------------------
 
-0. How to build
-1. How to setup
-2. How to use
-3. License
+1. How to build
+2. How to setup
+3. How to use
+4. License
 
 
 
@@ -41,7 +41,7 @@ Table of Contents
 
 
 
-0. How to build
+How to build
 --------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -57,7 +57,7 @@ Table of Contents
     $ `python setup.py`
 
 
-1. How to setup
+How to setup
 --------------------------------------------------------------------------------------------------------------------------------
 
 1. Build the plugin zip file.
@@ -67,7 +67,7 @@ Main toolbar is a plain choice but any toolbars/menus should work.
 4. Restart calibre.
 
 
-2. How to use
+How to use
 --------------------------------------------------------------------------------------------------------------------------------
 
 Select a book which has an EPUB format and press plug-in's action button.
@@ -78,7 +78,7 @@ specify command you want to use.
 
 
 
-3. License
+License
 --------------------------------------------------------------------------------------------------------------------------------
 
 ### Bibi Calibre Plug-in
