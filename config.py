@@ -47,6 +47,6 @@ class ConfigWidget(QWidget):
 
     def save_settings(self):
         new_prefs = {}
-        new_prefs[KEY_PATH_BROWSER] = unicode(self.path_browser_ledit.text())
+        new_prefs[KEY_PATH_BROWSER] = self.path_browser_ledit.text()
 
         plugin_prefs[STORE_NAME] = new_prefs
