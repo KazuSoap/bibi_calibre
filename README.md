@@ -7,8 +7,8 @@ Bibi EPUB reader plug-in for calibre.
 Summary
 --------------------------------------------------------------------------------------------------------------------------------
 
-BiBi is a browser based pretty-looking EPUB reader.
-BiBi can handle EPUB which uses vertical writing system well, so this plug-in
+Bibi is a browser based pretty-looking EPUB reader.
+Bibi can handle EPUB which uses vertical writing system well, so this plug-in
 is mainly intended for people using vertical writing system.
 But Bibi itself is very good EPUB reader so maybe useful for others.
 
@@ -19,14 +19,9 @@ select an epub book, and click button, that all!
 
 ### About Bibi
 
-* EPUB 3 and 2 compliant.
-* Open source. (MIT license)
-* Made with JavaScript. Works compatibly with all major web browsers on Mac/PC/smartphones:
-    - Safari
-    - Chrome, Opera, Vivaldi
-    - Firefox
-    - Microsoft Edge
-    - Internet Explorer 11 (except opening zipped EPUB archive)
+* EPUB 3+ and 2 compliant. Supports both reflowable and fixed-layout books of various language.
+* Made with JavaScript. Works compatibly with all major web browsers on various OS/devices.
+* Free. Open source software released under the MIT License.
 * [Bibi's web site](http://bibi.epub.link/)
 * [Bibi's GitHub repositoly page](https://github.com/satorumurmur/bibi)
 
@@ -35,26 +30,41 @@ select an epub book, and click button, that all!
 Table of Contents
 --------------------------------------------------------------------------------------------------------------------------------
 
+0. How to build
 1. How to setup
 2. How to use
 3. License
 
 
 
+--------------------------------------------------------------------------------------------------------------------------------
+
+
+
+0. How to build
+--------------------------------------------------------------------------------------------------------------------------------
+
+
+### Requirements
+* python 3.x
+* python-setuptools
+
+### Arrangements
+1. Clone [this repository](https://github.com/KazuSoap/bibi_calibre).
+2. $ `cd <the local repository>`
+3. Use the following command while in the local repository then you can find the plugin .zip.
+
+    $ `python setup.py`
+
 
 1. How to setup
 --------------------------------------------------------------------------------------------------------------------------------
 
-1. Download the plugin zip file.
+1. Build the plugin zip file.
 2. In Calibre choose **Preferences->Plugins**. Click the **Load plugin from file** button to browse to your plugin .zip file and click OK.
 3. You are asked which toolbars/menus you would like the plugin to appear on.
 Main toolbar is a plain choice but any toolbars/menus should work.
 4. Restart calibre.
-
-
-Or if you want to install from sources, use the following command while in sources directory to create plugin .zip and install it automatically::
-
-    > calibre-customize -b .
 
 
 2. How to use
