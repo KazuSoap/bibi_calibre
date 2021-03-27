@@ -6,7 +6,6 @@
 !*.png
 !*.py
 !*.txt
-!*.zip
 !.gitignore
 !setup.cfg
 !LICENSE
