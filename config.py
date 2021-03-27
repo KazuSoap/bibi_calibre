@@ -15,8 +15,6 @@ except ImportError as e:
     from PyQt4.Qt import QWidget, QGridLayout, QLabel, QLineEdit, QPushButton
 from calibre.utils.config import JSONConfig
 
-from calibre_plugins.extract_isbn.common_utils import KeyValueComboBox, KeyboardConfigDialog
-
 STORE_NAME = 'Options'
 KEY_PATH_BROWSER = 'pathBrowser'
 
