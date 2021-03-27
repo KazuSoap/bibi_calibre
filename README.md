@@ -1,23 +1,23 @@
-BiB/i Calibre Plug-in
+Bibi Calibre Plug-in
 ================================================================================================================================
 
-BiB/i EPUB reader plug-in for calibre.
+Bibi EPUB reader plug-in for calibre.
 
 
 Summary
 --------------------------------------------------------------------------------------------------------------------------------
 
-BiB/i is a browser based pretty-looking EPUB reader.
-BiB/i can handle EPUB which uses vertical writing system well, so this plug-in
+BiBi is a browser based pretty-looking EPUB reader.
+BiBi can handle EPUB which uses vertical writing system well, so this plug-in
 is mainly intended for people using vertical writing system.
-But BiB/i itself is very good EPUB reader so maybe useful for others.
+But Bibi itself is very good EPUB reader so maybe useful for others.
 
-BiB/i calibre plug-in makes it easy to read EPUB files on calibre library
-using BiB/i. You don't need to install BiB/i. Just install this plug-in,
+Bibi calibre plug-in makes it easy to read EPUB files on calibre library
+using Bibi. You don't need to install Bibi. Just install this plug-in,
 select an epub book, and click button, that all!
 
 
-### About BiB/i
+### About Bibi
 
 * EPUB 3 and 2 compliant.
 * Open source. (MIT license)
@@ -27,8 +27,8 @@ select an epub book, and click button, that all!
     - Firefox
     - Microsoft Edge
     - Internet Explorer 11 (except opening zipped EPUB archive)
-* [BiB/i's web site](http://bibi.epub.link/)
-* [BiB/i's GitHub repositoly page](https://github.com/satorumurmur/bibi)
+* [Bibi's web site](http://bibi.epub.link/)
+* [Bibi's GitHub repositoly page](https://github.com/satorumurmur/bibi)
 
 
 
@@ -62,8 +62,8 @@ Or if you want to install from sources, use the following command while in sourc
 
 Select a book which has an EPUB format and press plug-in's action button.
 
-BiB/i calibre plug-in opens BiB/i using platform's default web browser by default.
-If you want to open BiB/i using other browser, go to plug-in preference and
+Bibi calibre plug-in opens Bibi using platform's default web browser by default.
+If you want to open Bibi using other browser, go to plug-in preference and
 specify command you want to use.
 
 
@@ -71,19 +71,19 @@ specify command you want to use.
 3. License
 --------------------------------------------------------------------------------------------------------------------------------
 
-### BiB/i Calibre Plug-in
+### Bibi Calibre Plug-in
 
 * &copy; Daisuke Cato - https://github.com/dcato/bibi_calibre
 * Licensed under GPL-3.0 - https://www.gnu.org/licenses/gpl-3.0.txt
 
 
-### BiB/i
+### Bibi
 
 * &copy; Satoru MATSUSHIMA - http://bibi.epub.link/ or https://github.com/satorumurmur/bibi
 * Licensed under the MIT license. - http://www.opensource.org/licenses/mit-license.php
 
 
-### BiB/i is including and powered by these open source softwares:
+### Bibi is including and powered by these open source softwares:
 
 * [The Elegant Icon Font](http://www.elegantthemes.com/blog/resources/elegant-icon-font) ... &copy; Elegant Themes, Inc. (Dual licensed under the GPL 2.0 and MIT license.)
 * [Font Awesome](http://fontawesome.io) ... &copy; Dave Gandy ([Licensed under SIL Open Font License (OFL) 1.1](http://scripts.sil.org/OFL))
@@ -93,7 +93,7 @@ specify command you want to use.
 * [sML](https://github.com/satorumurmur/sML) ... &copy; Satoru MATSUSHIMA (Licensed under the MIT license.)
 
 
-### BiB/i Extension: Unzipper is including and powered by these open source softwares:
+### Bibi Extension: Unzipper is including and powered by these open source softwares:
 
 * [JSZip](http://stuartk.com/jszip) ... &copy; Stuart Knightley (Dual licensed under the MIT license or GPLv3.)
 * [base64.js](https://github.com/dankogai/js-base64) ... &copy; dankogai (Licensed under the MIT license.)
