@@ -26,7 +26,6 @@ select an epub book, and click button, that all!
 * [Bibi's GitHub repositoly page](https://github.com/satorumurmur/bibi)
 
 
-
 Table of Contents
 --------------------------------------------------------------------------------------------------------------------------------
 
@@ -36,32 +35,30 @@ Table of Contents
 4. License
 
 
-
 --------------------------------------------------------------------------------------------------------------------------------
-
 
 
 How to build
 --------------------------------------------------------------------------------------------------------------------------------
 
-
 ### Requirements
-* python 3.x
-* python-setuptools
+* calibre >= 5
+* python >= 3.6
+* python-setuptools >= 30.3.0
 
 ### Arrangements
 1. Clone [this repository](https://github.com/KazuSoap/bibi_calibre).
-2. $ `cd <the local repository>`
-3. Use the following command while in the local repository then you can find the plugin .zip.
+2. `$ cd <the local repository>`
+3. Use the following command while in the local repository then you can find the plug-in .zip.
 
-    $ `python setup.py`
+    `$ python setup.py`
 
 
 How to setup
 --------------------------------------------------------------------------------------------------------------------------------
 
-1. Build the plugin zip file.
-2. In Calibre choose **Preferences->Plugins**. Click the **Load plugin from file** button to browse to your plugin .zip file and click OK.
+1. Build the plug-in zip file.
+2. In Calibre choose **Preferences->Plugins**. Click the **Load plugin from file** button to browse to your plug-in .zip file and click OK.
 3. You are asked which toolbars/menus you would like the plugin to appear on.
 Main toolbar is a plain choice but any toolbars/menus should work.
 4. Restart calibre.
@@ -75,7 +72,6 @@ Select a book which has an EPUB format and press plug-in's action button.
 Bibi calibre plug-in opens Bibi using platform's default web browser by default.
 If you want to open Bibi using other browser, go to plug-in preference and
 specify command you want to use.
-
 
 
 License
