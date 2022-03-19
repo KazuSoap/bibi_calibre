@@ -16,7 +16,7 @@ this program. If not, see <http://www.gnu.org/licenses/>.
 """
 
 __copyright__  = 'Copyright (C) 2016 Daisuke Cato <daisuke.cato@gmail.com>'
-__version__    = '1.2.0.1'
+__version__    = '1.2.0.2'
 __license__    = 'GPL v3'
 __author__     = 'Daisuke Cato'
 __maintainer__ = 'KazuSoap'
@@ -100,7 +100,14 @@ class BibiCalibreAction(InterfaceAction):
         setup bibi and start web server
         '''
 
-        self.htmlroot = PersistentTemporaryDirectory()
+        c = config.plugin_prefs[config.STORE_NAME]
+        doc_root = c.get(config.KEY_HTTPD_DOC_ROOT).strip()
+        if len(doc_root) != 0:
+            os.makedirs(doc_root, exist_ok=True)
+        else:
+            doc_root = PersistentTemporaryDirectory()
+
+        self.htmlroot = doc_root
         print(self.htmlroot)
 
         zipfile = os.path.join(self.htmlroot, 'bibi.zip')
@@ -111,7 +118,6 @@ class BibiCalibreAction(InterfaceAction):
         handler = RootedHTTPRequestHandler
         handler.base_path = self.htmlroot
 
-        c = config.plugin_prefs[config.STORE_NAME]
         port = c.get(config.KEY_HTTPD_PORT).strip()
         if len(port) != 0:
             port = int(port)
