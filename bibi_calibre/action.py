@@ -77,11 +77,7 @@ class BibiCalibreAction(InterfaceAction):
         if not os.path.exists(book_fullpath):
             extract(epubpath, book_fullpath)
 
-        port = c.get(config.KEY_HTTPD_PORT).strip()
-        if len(port) == 0:
-            port = str(self.port)
-
-        url = 'http://localhost:' + port + '/bibi/?book=' + book_path
+        url = 'http://localhost:' + str(self.port) + '/bibi/?book=' + book_path
 
         browser = c.get(config.KEY_PATH_BROWSER).strip()
         if browser:
@@ -115,7 +111,14 @@ class BibiCalibreAction(InterfaceAction):
         handler = RootedHTTPRequestHandler
         handler.base_path = self.htmlroot
 
-        self.httpd = ThreadedTCPServer(('localhost', 0), handler)
+        c = config.plugin_prefs[config.STORE_NAME]
+        port = c.get(config.KEY_HTTPD_PORT).strip()
+        if len(port) != 0:
+            port = int(port)
+        else:
+            port = 0
+
+        self.httpd = ThreadedTCPServer(('localhost', port), handler)
         self.ip, self.port = self.httpd.server_address
 
         print('server started at: ', self.ip, str(self.port))
