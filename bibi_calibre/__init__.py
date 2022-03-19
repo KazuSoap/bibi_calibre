@@ -16,7 +16,7 @@ this program. If not, see <http://www.gnu.org/licenses/>.
 """
 
 __copyright__  = 'Copyright (C) 2016 Daisuke Cato <daisuke.cato@gmail.com>'
-__version__    = '1.2.0'
+__version__    = '1.2.0.1'
 __license__    = 'GPL v3'
 __author__     = 'Daisuke Cato'
 __maintainer__ = 'KazuSoap'

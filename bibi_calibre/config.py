@@ -16,7 +16,7 @@ this program. If not, see <http://www.gnu.org/licenses/>.
 """
 
 __copyright__  = 'Copyright (C) 2016 Daisuke Cato <daisuke.cato@gmail.com>'
-__version__    = '1.2.0'
+__version__    = '1.2.0.1'
 __license__    = 'GPL v3'
 __author__     = 'Daisuke Cato'
 __maintainer__ = 'KazuSoap'
@@ -33,9 +33,11 @@ from calibre.utils.config import JSONConfig
 
 STORE_NAME = 'Options'
 KEY_PATH_BROWSER = 'pathBrowser'
+KEY_HTTPD_PORT = 'httpdPort'
 
 DEFAULT_STORE_VALUES = {
     KEY_PATH_BROWSER: '',
+    KEY_HTTPD_PORT: '',
 }
 
 # This is where all preferences for this plugin will be stored
@@ -59,8 +61,14 @@ class ConfigWidget(QWidget):
         self.path_browser_ledit = QLineEdit(path_browser, self)
         layout.addWidget(self.path_browser_ledit, 1, 0)
 
+        layout.addWidget(QLabel('httpd port:', self), 2, 0)
+        httpd_port = c.get(KEY_HTTPD_PORT, DEFAULT_STORE_VALUES[KEY_HTTPD_PORT])
+        self.httpd_port_ledit = QLineEdit(httpd_port, self)
+        layout.addWidget(self.httpd_port_ledit, 3, 0)
+
     def save_settings(self):
         new_prefs = {}
         new_prefs[KEY_PATH_BROWSER] = self.path_browser_ledit.text()
+        new_prefs[KEY_HTTPD_PORT] = self.httpd_port_ledit.text()
 
         plugin_prefs[STORE_NAME] = new_prefs

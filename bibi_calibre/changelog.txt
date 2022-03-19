@@ -1,6 +1,10 @@
-[B]Version 1.2.0[/B] - 28 Mar 2021
+[B]Version 1.2.0.1[/B] - 19 Mar 2022
+Added a setting to specify the "port" number when "httpd" is started.
+Based on BiBi 1.2.0 (2020/07/05)
+
+[B]Version 1.2.0.0[/B] - 28 Mar 2021
 Version up from BiB/i 0.999.9-r7 to Bibi 1.2.0
-Based on BiB/i 0.999.9-r7 (2016/06/23)
+Based on BiBi 1.2.0 (2020/07/05)
 
 [B]Version 1.0.2[/B] - 28 Mar 2021
 Migrate from python2 to python3 for calibre 5.x

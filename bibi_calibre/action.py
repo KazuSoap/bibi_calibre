@@ -16,7 +16,7 @@ this program. If not, see <http://www.gnu.org/licenses/>.
 """
 
 __copyright__  = 'Copyright (C) 2016 Daisuke Cato <daisuke.cato@gmail.com>'
-__version__    = '1.2.0'
+__version__    = '1.2.0.1'
 __license__    = 'GPL v3'
 __author__     = 'Daisuke Cato'
 __maintainer__ = 'KazuSoap'
@@ -77,7 +77,11 @@ class BibiCalibreAction(InterfaceAction):
         if not os.path.exists(book_fullpath):
             extract(epubpath, book_fullpath)
 
-        url = 'http://localhost:' + str(self.port) + '/bibi/?book=' + book_path
+        port = c.get(config.KEY_HTTPD_PORT).strip()
+        if len(port) == 0:
+            port = str(self.port)
+
+        url = 'http://localhost:' + port + '/bibi/?book=' + book_path
 
         browser = c.get(config.KEY_PATH_BROWSER).strip()
         if browser:
